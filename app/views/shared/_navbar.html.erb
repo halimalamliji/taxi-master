@@ -1,0 +1,31 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon py-2">
+  <div class="container-fluid">
+    <%= link_to root_path, class: "navbar-brand" do %>
+      <%= image_tag "taximaster-logo.png" %>
+    <% end %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Formulaire de recherche dans la barre de navigation -->
+
+      <ul class="navbar-nav ms-auto align-items-center">
+
+        <li class="nav-item active">
+          <%= link_to "Home", root_path, class: "btn btn-nav" %>
+        </li>
+        <li class="nav-item active">
+          <%= link_to "Services", pages_services_path, class: "btn btn-nav" %>
+        </li>
+        <li class="nav-item active">
+          <%= link_to "Réservation", pages_reservations_path, class: "btn btn-nav" %>
+        </li>
+        <li class="nav-item active">
+          <%= link_to "Contact", pages_contact_path, class: "btn btn-nav" %>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</div>
