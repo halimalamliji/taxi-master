@@ -1,2 +1,65 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://taximaster.onrender.com/header3.jpg);">
+  <div class="container">
+    <h1>Votre transport bordelais 24h/24 et 7j/7</h1>
+    <%= link_to "Réservez dès maintenant", pages_reservations_path, class: "btn btn-banner" %>
+  </div>
+</div>
+
+
+<div class="card m3 p2">
+  <h3 class="text-center">Qui sommes nous?</h3>
+  <p class="text-center">Taxi Master est une société de transport de confiance qui vous accompagne sur tous vos déplacements 7j/7 et 24h/24 dans la métropole de Bordeaux et de ses environs.
+  Constitué de plus d'une centaine de taxis reconnus pour leur efficacité, leur patience et leur professionalisme, Taxi Master s'engage à vous offrir une prestation optimale.
+  Nos chauffeurs sont mis à votre disposition chaque jour pour tous vos trajets professionels, privés ou touristiques.
+  </p>
+</div>
+
+<div class="container">
+  <div class="row">
+
+    <div class="container col-8">
+      <div class="row">
+        <div class="col-3 card-s">
+        <p><i class="fa-solid fa-briefcase fa-2xl"></i> Trajets professionnels</p>
+        </div>
+
+        <div class="col-3 card-s">
+        <p><i class="fa-solid fa-star fa-2xl"></i> Trajets privées</p>
+        </div>
+
+        <div class="col-3 card-s">
+        <p><i class="fa-solid fa-plane fa-2xl"></i> Aéroports</p>
+        </div>
+
+        <div class="col-3 card-s">
+        <p><i class="fa-solid fa-train fa-2xl"></i> Gares</p>
+        </div>
+
+        <div class="col-3 card-s">
+        <p><i class="fa-solid fa-camera-retro fa-2xl"></i> Trajets touristiques</p>
+        </div>
+
+        <div class="col-3 card-s">
+        <p><i class="fa-solid fa-people-group fa-2xl"></i> Trajets en groupe</p>
+        </div>
+
+        <div class="col-3 card-s">
+        <p><i class="fa-solid fa-stethoscope fa-2xl"></i> Trajets médicaux</p>
+        </div>
+
+        <div class="col-3 card-s">
+        <p><i class="fa-solid fa-road fa-2xl"></i> Toutes distances</p>
+        </div>
+
+        <div class="col-3 card-s">
+        <p><i class="fa-solid fa-car-side fa-2xl"></i> Confort optimal</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col-4 card-category ml-0" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://www.hebergeur-image.fr/uploads/20250129/6d21293b2a4ae2a49b481c9c9cfe71bf9f217006.png);">
+    <%= link_to "Découvrez tout nos services", pages_services_path, class: "btn btn-banner" %>
+    </div>
+  </div>
+</div>
