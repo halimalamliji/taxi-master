@@ -13,6 +13,50 @@
   }
 }
 
+.card-service {
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  margin: 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.3s ease;
+
+  h3 {
+    border-bottom: 1px solid #000000;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    text-align: justify;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5%;
+  }
+
+  .col-md-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .col-md-8 {
+    padding: 0px 10px;
+  }
+}
+
 .card-s {
   background-color: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
