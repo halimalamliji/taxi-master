@@ -13,7 +13,7 @@
   }
 }
 
-.card-service {
+.card-main {
   background-color: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 5px;
@@ -33,6 +33,16 @@
     text-align: center;
     margin-top: 10px;
     margin-bottom: 20px;
+  }
+
+  h4 {
+    font-size: 17px;
+    font-family: Nunito;
+    font-weight: bold;
+  }
+
+  i:hover {
+    color: $main;
   }
 
   p {
@@ -87,6 +97,7 @@
 }
 
 .card-category {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
   background-size: cover;
   background-position: center;
   height: 219px;

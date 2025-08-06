@@ -1,0 +1,78 @@
+<div class="card p-4 mb-5">
+  <h3 class="text-center mb-4">Réservez un taxi dès maintenant !</h3>
+
+  <%= form_with model: @booking, url: bookings_path, local: true do |f| %>
+    <% if @booking.errors.any? %>
+      <div class="alert alert-danger">
+        <ul>
+          <% @booking.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="mb-3">
+          <%= f.label :first_name, "Prénom" %>
+          <%= f.text_field :first_name, class: "form-control" %>
+        </div>
+        <div class="mb-3">
+          <%= f.label :last_name, "Nom" %>
+          <%= f.text_field :last_name, class: "form-control" %>
+        </div>
+        <div class="mb-3">
+          <%= f.label :phone, "Numéro de téléphone" %>
+          <%= f.text_field :phone, class: "form-control" %>
+        </div>
+        <div class="mb-3">
+          <%= f.label :email, "Email" %>
+          <%= f.email_field :email, class: "form-control" %>
+        </div>
+        <div class="mb-3">
+          <%= f.label :pickup_address, "Adresse de départ" %>
+          <%= f.text_field :pickup_address, class: "form-control" %>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="mb-3">
+          <%= f.label :destination, "Destination" %>
+          <%= f.text_field :destination, class: "form-control" %>
+        </div>
+        <div class="mb-3">
+          <%= f.label :date, "Date du trajet" %>
+          <%= f.date_field :date, class: "form-control" %>
+        </div>
+        <div class="mb-3">
+          <%= f.label :time, "Heure" %>
+          <%= f.time_field :time, class: "form-control" %>
+        </div>
+        <div class="mb-3">
+          <%= f.label :people, "Nombre de passagers" %>
+          <%= f.number_field :people, class: "form-control" %>
+        </div>
+        <div class="mb-3">
+          <%= f.label :bags, "Nombre de bagages" %>
+          <%= f.number_field :bags, class: "form-control" %>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div class="mb-3">
+          <%= f.label :comment, "Message optionnel" %>
+          <%= f.text_area :comment, class: "form-control", rows: 3 %>
+        </div>
+      </div>
+
+      <div class="col-12 text-center">
+        <%= f.submit "Envoyer la réservation", class: "btn btn-main px-4 py-2" %>
+      </div>
+    </div>
+  <% end %>
+
+  <% if notice %>
+    <p class="notice text-success mt-3"><%= notice %></p>
+  <% end %>
+</div>

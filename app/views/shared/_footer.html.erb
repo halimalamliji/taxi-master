@@ -1,11 +1,15 @@
 <div class="footer">
   <div class="footer-links">
-    <a href="#"><i class="fa-brands fa-google"></i></a>
-    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-    <a href="#"><i class="fa-solid fa-envelope"></i></a>
-    <a href="#"><i class="fa-solid fa-phone"></i></a>
+    <!--<a href="#"><i class="fa-brands fa-google"></i></a>
+    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>-->
+    <%= link_to "tel:+33645664059" do %>
+      <i class="fa-solid fa-phone"></i>
+    <% end %>
+    <%= link_to "mailto:l_a_33@hotmail.fr" do %>
+      <i class="fa-solid fa-envelope"></i>
+    <% end %>
   </div>
   <div class="footer-copyright">
-    Copyright © 2024 Taxi Master - Tous droits réservés - Mentions légales
+    Copyright © 2024 Taxi Master - Tous droits réservés
   </div>
 </div>
