@@ -1,2 +1,17 @@
-<h1>Pages#contact</h1>
-<p>Find me in app/views/pages/contact.html.erb</p>
+<div class="card-main row justify-content-center">
+  <h3>Contact</h3>
+  <div class="col-5 text-center">
+    <%= link_to "tel:+33645664059" do %>
+      <i class="fa-solid fa-phone fa-2xl p-4"></i>
+    <% end %>
+    <h4>Appelez nous:</h4>
+    (+33)06 45 66 40 59
+  </div>
+  <div class="col-5 text-center">
+    <%= link_to "mailto:l_a_33@hotmail.fr" do %>
+      <i class="fa-solid fa-envelope fa-2xl p-4"></i>
+    <% end %>
+    <h4>Envoyez nous un email:</h4>
+    l_a_33@hotmail.fr
+  </div>
+</div>

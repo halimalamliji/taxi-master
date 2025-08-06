@@ -35,9 +35,9 @@
 }
 
 .btn-main {
-  color: black;
+  color: white;
   font-family: New Amsterdam;
-  background-color: white;
+  background-color: $main;
   border: 1px solid #4A4A4A;
   padding: 8px 24px;
   border-radius: 50px;
@@ -49,6 +49,6 @@
 .btn-main:hover {
   opacity: 0.7;
   border: 1px solid black;
-  background-color: $main;
-  color: white;
+  background-color: white;
+  color: black;
 }

@@ -1,13 +1,13 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://taximaster.onrender.com/header3.jpg);">
-  <div class="container">
+<div class="banner" style="background-image: url('<%= asset_path('header.png') %>');">
+  <div class="container d-flex flex-column align-items-end">
     <h1>Votre transport bordelais 24h/24 et 7j/7</h1>
-    <%= link_to "Réservez dès maintenant", pages_reservations_path, class: "btn btn-banner" %>
+    <%= link_to "Réservez dès maintenant", new_booking_path, class: "btn btn-banner" %>
   </div>
 </div>
 
 
-<div class="card m3 p2">
-  <h3 class="text-center">Qui sommes nous?</h3>
+<div class="card-main">
+  <h3 class="text-center w-100">Qui sommes nous?</h3>
   <p class="text-center">Taxi Master est une société de transport de confiance qui vous accompagne sur tous vos déplacements 7j/7 et 24h/24 dans la métropole de Bordeaux et de ses environs.
   Constitué de plus d'une centaine de taxis reconnus pour leur efficacité, leur patience et leur professionalisme, Taxi Master s'engage à vous offrir une prestation optimale.
   Nos chauffeurs sont mis à votre disposition chaque jour pour tous vos trajets professionels, privés ou touristiques.
@@ -58,7 +58,7 @@
       </div>
     </div>
 
-    <div class="col-4 card-category ml-0" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://www.hebergeur-image.fr/uploads/20250617/cbbdd814a985db9cc6aeb53ad027708959c43f2e.png);">
+    <div class="col-4 card-category ml-0" style="background-image: url('<%= asset_path('taxi1.png') %>');">
     <%= link_to "Découvrez tout nos services", pages_services_path, class: "btn btn-banner" %>
     </div>
   </div>
