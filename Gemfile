@@ -62,6 +62,8 @@ gem "sassc-rails"
 # Nokogiri
 #gem 'nokogiri', '~> 1.18', '>= 1.18.2'
 
+gem "net-smtp", "~> 0.5.0"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mswin mswin64 mingw x64_mingw ]
