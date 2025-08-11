@@ -79,6 +79,4 @@ test:
 #
 production:
   <<: *default
-  database: taxi_master_production
-  username: taxi_master
-  password: <%= ENV["TAXI_MASTER_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
