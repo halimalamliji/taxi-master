@@ -24,9 +24,6 @@
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.3s ease;
 
   h3 {
     border-bottom: 1px solid #000000;
@@ -113,4 +110,18 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin-top: 10px;
   margin-left: 0px;
+}
+
+.card-main, .card-s, .card-category, .card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.js-enabled .card-main,
+.js-enabled .card-s,
+.js-enabled .card-category,
+.js-enabled .card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.3s ease;
 }

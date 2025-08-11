@@ -1,137 +1,39 @@
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
+document.documentElement.classList.add("js-enabled");
 
-document.addEventListener("DOMContentLoaded", function () {
-  gsap.registerPlugin(ScrollTrigger);
+function initScrollAnimations() {
+  const animatedClasses = [".card-main", ".card-s", ".card-category", ".card"];
 
-  ScrollTrigger.batch(".card-main", {
-    interval: 0.1,
-    onEnter: batch => gsap.to(batch, {
-      opacity: 1,
-      y: 0,
-      stagger: { each: 0.15, grid: [1, 3] },
-      overwrite: true
-    }),
+  animatedClasses.forEach(cls => {
+    ScrollTrigger.batch(cls, {
+      interval: 0.1,
+      onEnter: batch => gsap.to(batch, {
+        opacity: 1,
+        y: 0,
+        stagger: { each: 0.15, grid: [1, 3] },
+        overwrite: true
+      }),
+      onEnterBack: batch => gsap.to(batch, {
+        opacity: 1,
+        y: 0,
+        stagger: 0.15,
+        overwrite: true
+      }),
+      onLeaveBack: batch => gsap.to(batch, {
+        opacity: 0,
+        y: 100,
+        duration: 0.4,
+        stagger: 0.1,
+        overwrite: true
+      }),
+      start: "20px bottom",
+      end: "top top"
+    });
 
-    onEnterBack: batch => gsap.to(batch, {
-      opacity: 1,
-      y: 0,
-      stagger: 0.15,
-      overwrite: true
-    }),
-    onLeaveBack: batch => gsap.to(batch, {
-      opacity: 0,
-      y: 100,
-      duration: 0.4,
-      stagger: 0.1,
-      overwrite: true
-    }),
-    start: "20px bottom",
-    end: "top top"
+    ScrollTrigger.addEventListener("refreshInit", () =>
+      gsap.set(cls, { y: 0 })
+    );
   });
+}
 
-  ScrollTrigger.addEventListener("refreshInit", () =>
-    gsap.set(".card-main", { y: 0 })
-  );
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  gsap.registerPlugin(ScrollTrigger);
-
-  ScrollTrigger.batch(".card-s", {
-    interval: 0.1,
-    onEnter: batch => gsap.to(batch, {
-      opacity: 1,
-      y: 0,
-      stagger: { each: 0.15, grid: [1, 3] },
-      overwrite: true
-    }),
-
-    onEnterBack: batch => gsap.to(batch, {
-      opacity: 1,
-      y: 0,
-      stagger: 0.15,
-      overwrite: true
-    }),
-    onLeaveBack: batch => gsap.to(batch, {
-      opacity: 0,
-      y: 100,
-      duration: 0.4,
-      stagger: 0.1,
-      overwrite: true
-    }),
-    start: "20px bottom",
-    end: "top top"
-  });
-
-  ScrollTrigger.addEventListener("refreshInit", () =>
-    gsap.set(".card-s", { y: 0 })
-  );
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  gsap.registerPlugin(ScrollTrigger);
-
-  ScrollTrigger.batch(".card-category", {
-    interval: 0.1,
-    onEnter: batch => gsap.to(batch, {
-      opacity: 1,
-      y: 0,
-      stagger: { each: 0.15, grid: [1, 3] },
-      overwrite: true
-    }),
-
-    onEnterBack: batch => gsap.to(batch, {
-      opacity: 1,
-      y: 0,
-      stagger: 0.15,
-      overwrite: true
-    }),
-    onLeaveBack: batch => gsap.to(batch, {
-      opacity: 0,
-      y: 100,
-      duration: 0.4,
-      stagger: 0.1,
-      overwrite: true
-    }),
-    start: "20px bottom",
-    end: "top top"
-  });
-
-  ScrollTrigger.addEventListener("refreshInit", () =>
-    gsap.set(".card-category", { y: 0 })
-  );
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  gsap.registerPlugin(ScrollTrigger);
-
-  ScrollTrigger.batch(".card", {
-    interval: 0.1,
-    onEnter: batch => gsap.to(batch, {
-      opacity: 1,
-      y: 0,
-      stagger: { each: 0.15, grid: [1, 3] },
-      overwrite: true
-    }),
-
-    onEnterBack: batch => gsap.to(batch, {
-      opacity: 1,
-      y: 0,
-      stagger: 0.15,
-      overwrite: true
-    }),
-    onLeaveBack: batch => gsap.to(batch, {
-      opacity: 0,
-      y: 100,
-      duration: 0.4,
-      stagger: 0.1,
-      overwrite: true
-    }),
-    start: "20px bottom",
-    end: "top top"
-  });
-
-  ScrollTrigger.addEventListener("refreshInit", () =>
-    gsap.set(".card", { y: 0 })
-  );
-});
+document.addEventListener("turbo:load", initScrollAnimations);
