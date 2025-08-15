@@ -96,4 +96,14 @@ Rails.application.configure do
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
 
   config.action_mailer.default_url_options = { host: "taxi-master-c89e477f02e0.herokuapp.com", protocol: 'https' }
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    user_name: ENV['1b015f8d48b3a3'],
+    password: ENV['3cdf38ff5f31b6'],
+    address: 'sandbox.smtp.mailtrap.io',
+    host: 'sandbox.smtp.mailtrap.io',
+    port: '2525',
+    authentication: :plain
+  }
 end
