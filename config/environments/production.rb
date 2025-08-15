@@ -103,7 +103,7 @@ Rails.application.configure do
     password: ENV['3cdf38ff5f31b6'],
     address: 'sandbox.smtp.mailtrap.io',
     host: 'sandbox.smtp.mailtrap.io',
-    port: '2525',
-    authentication: :plain
+    port: '587',
+    authentication: :cram_md5
   }
 end
