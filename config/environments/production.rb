@@ -104,6 +104,6 @@ Rails.application.configure do
     address: 'sandbox.smtp.mailtrap.io',
     host: 'sandbox.smtp.mailtrap.io',
     port: '587',
-    authentication: :plain
+    authentication: :cram_md5
   }
 end

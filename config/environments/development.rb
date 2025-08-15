@@ -74,13 +74,4 @@ Rails.application.configure do
   # Raise error when a before_action's only/except options reference missing actions
   config.action_controller.raise_on_missing_callback_actions = true
 
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    user_name: '1b015f8d48b3a3',
-    password: '3cdf38ff5f31b6',
-    address: 'sandbox.smtp.mailtrap.io',
-    domain: 'sandbox.smtp.mailtrap.io',
-    port: '2525',
-    authentication: :plain
-  }
 end
