@@ -97,13 +97,17 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: "taxi-master-c89e477f02e0.herokuapp.com", protocol: 'https' }
 
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
+
   config.action_mailer.smtp_settings = {
-    user_name: ENV['1b015f8d48b3a3'],
-    password: ENV['3cdf38ff5f31b6'],
+    user_name: '1b015f8d48b3a3',
+    password: '3cdf38ff5f31b6',
     address: 'sandbox.smtp.mailtrap.io',
     host: 'sandbox.smtp.mailtrap.io',
     port: '587',
-    authentication: :cram_md5
+    authentication: :cram_md5,
+    enable_starttls_auto: true,
   }
 end
