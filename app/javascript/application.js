@@ -2,3 +2,4 @@
 import "@popperjs/core"
 import "bootstrap"
 import "./script.js"
+import "/app/javascript/script.js"
